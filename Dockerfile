@@ -32,4 +32,4 @@ USER appuser
 #CMD ["server.py", "--bind", "0.0.0.0:5000", "server:app"]
 
 ENV FLASK_APP=app.py
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=0.0.0.0:5000"]
