@@ -23,5 +23,13 @@ USER appuser
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 #CMD ["gunicorn", "--bind", "0.0.0.0:5000", "server:app"]
-ENTRYPOINT [ "python" ] 
-CMD [ "server.py" ] 
+
+#work but not from outside
+#ENTRYPOINT [ "python" ] 
+#CMD [ "server.py" ]
+
+
+#CMD ["server.py", "--bind", "0.0.0.0:5000", "server:app"]
+
+ENV FLASK_APP=app.py
+CMD ["flask", "run", "--host=0.0.0.0"]
