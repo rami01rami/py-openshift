@@ -29,7 +29,7 @@ def audio_data():
 
 if __name__ == '__main__':
     # Use this option to run regular http server
-    app.run()
+    app.run(host="0.0.0.0", port=5000)
 
     # Use this option to run https server using ad-hoc certiciate (this is a built-in Flask capability used for development)
     # (Flask will generate a self-signed certificate on the fly when ever you run the server)
